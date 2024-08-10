@@ -1,0 +1,19 @@
+delete_results => AFTER DELETE ON resultats de UPDATE FROM listeselecteurs LASA NULL
+update_result => AFTER DELETE ON listeselecteurs de DELETE FROM resultats
+delete_notif => AFTER DELETE ON notifications de DELETE FROM demandes
+delete_bureau => AFTER DELETE ON bureau de DELETE FROM resultats AND listeselecteur
+//----------------------------------------------------------------------------------------------
+
+SELECT candidat.nomCandidat, candidat.numeroCandidat, SUM(resultats.resultat) AS total_voix, listeselecteur.nombreElecteurs, resultats.codeBv FROM resultats JOIN candidat ON candidat.numeroCandidat = resultats.numeroCandidat JOIN listeselecteur ON listeselecteur.codeBv = resultats.codeBv GROUP BY candidat.numeroCandidat, candidat.nomCandidat, resultats.codeBv ORDER BY resultats.codeBv
+
+SELECT SUM(nombreElecteurs) AS electeurs, SUM(voteNull) AS voteNull, SUM(voteBlanche) AS voteBlanche, SUM(voteExprime) AS voteExprime,
+SUM(nombresVotants) AS votants, centrevote.idCentre FROM listeselecteur JOIN bureau ON bureau.codeBv = listeselecteur.codeBv
+JOIN centrevote ON centrevote.idCentre = bureau.idCentre GROUP BY centrevote.idCentre HAVING centrevote.idCentre = 1
+
+
+SELECT SUM(total_voix) FROM (SELECT candidat.nomCandidat, candidat.numeroCandidat, SUM(resultats.resultat) AS total_voix, listeselecteur.nombreElecteurs, resultats.codeBv FROM resultats JOIN candidat ON candidat.numeroCandidat = resultats.numeroCandidat JOIN listeselecteur ON listeselecteur.codeBv = resultats.codeBv GROUP BY candidat.numeroCandidat, candidat.nomCandidat, resultats.codeBv ORDER BY resultats.codeBv) AS table GROUP BY codeBv, ;
+
+SELECT SUM(total_voix) AS voix, nomCandidat FROM 
+(SELECT candidat.nomCandidat, candidat.numeroCandidat, SUM(resultats.resultat) AS total_voix, listeselecteur.nombreElecteurs, 
+resultats.codeBv FROM resultats JOIN candidat ON candidat.numeroCandidat = resultats.numeroCandidat JOIN listeselecteur ON listeselecteur.codeBv = resultats.codeBv GROUP BY candidat.numeroCandidat, candidat.nomCandidat, resultats.codeBv ORDER BY resultats.codeBv) AS table_personne 
+GROUP BY nomCandidat
