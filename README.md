@@ -54,9 +54,9 @@ Une application en PHP pour la gestion des éléctions, y compris l'administrati
       - Email : user01@gmail.com
       - Mot de passe : user01
 
-## Illustrations
+## Illustration
 ![Illustration 1](public/image/election.png)
-
+![Illustration 1](public/image/bureau.png)
 
 
 ## Contributions
