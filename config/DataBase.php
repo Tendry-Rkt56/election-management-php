@@ -2,7 +2,8 @@
 
 namespace Config;
 
-class DataBase {
+class DataBase 
+{
 
     private $conn;
     private $dbname;
