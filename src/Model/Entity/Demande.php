@@ -2,7 +2,8 @@
 
 namespace App\Model\Entity;
 
-class Demande extends Entity {
+class Demande extends Entity 
+{
 
     public function insertDemandes ($idNotif, $data = [])
     {
