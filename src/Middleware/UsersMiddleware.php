@@ -2,7 +2,8 @@
 
 namespace App\Middleware;
 
-class UsersMiddleware {
+class UsersMiddleware 
+{
 
     private static $routes = ['/Users/loginView', '/Users/login'];
 
