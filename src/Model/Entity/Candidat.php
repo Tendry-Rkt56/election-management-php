@@ -4,7 +4,8 @@ namespace App\Model\Entity;
 
 use Exception;
 
-class Candidat extends Entity {
+class Candidat extends Entity 
+{
 
     public function getAllCandidats ()
     {
