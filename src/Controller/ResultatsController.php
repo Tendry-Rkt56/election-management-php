@@ -4,7 +4,8 @@ namespace App\Controller;
 
 use App\Manager;
 
-class ResultatsController extends Controller {
+class ResultatsController extends Controller 
+{
 
     private function getProvince ($data = []) 
     {
