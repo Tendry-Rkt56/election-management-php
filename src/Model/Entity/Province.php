@@ -2,7 +2,8 @@
 
 namespace App\Model\Entity;
 
-class Province extends Entity {
+class Province extends Entity 
+{
 
     public function getAllProvinces ()
     {
