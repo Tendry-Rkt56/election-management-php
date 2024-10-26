@@ -4,7 +4,8 @@ namespace App\Controller;
 
 use App\Manager;
 
-class CandidatsController extends Controller {
+class CandidatsController extends Controller 
+{
 
     public function index ()
     {
