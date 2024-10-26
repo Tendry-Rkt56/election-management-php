@@ -2,7 +2,8 @@
 
 namespace App\Model\Entity;
 
-class Centre extends Entity {
+class Centre extends Entity 
+{
 
     public function getAllCentreVote ()
     {
