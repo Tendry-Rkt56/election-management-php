@@ -2,7 +2,8 @@
 
 namespace App\Model\Entity;
 
-class Bureau extends Entity {
+class Bureau extends Entity 
+{
 
     public function getBureaux ($data = [])
     {
