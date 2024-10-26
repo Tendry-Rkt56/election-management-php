@@ -4,7 +4,8 @@ namespace App\Model\Entity;
 
 use Config\DataBase;
 
-class Entity {
+class Entity 
+{
 
     public $db;
 
