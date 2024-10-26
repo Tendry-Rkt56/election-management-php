@@ -4,7 +4,8 @@ namespace App\Model\Entity;
 
 use Exception;
 
-class Resultat extends Entity {
+class Resultat extends Entity 
+{
 
     /**
      * Tsy ilaina akory
