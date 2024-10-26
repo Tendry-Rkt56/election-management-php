@@ -6,7 +6,8 @@ use Config\DataBase;
 
 require_once '../Config/Constante.php';
 
-class Manager {
+class Manager 
+{
 
     private static $_instance;
     private static $_db;
