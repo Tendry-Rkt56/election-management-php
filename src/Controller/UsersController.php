@@ -4,7 +4,8 @@ namespace App\Controller;
 
 use App\Manager;
 
-class UsersController extends Controller {
+class UsersController extends Controller 
+{
 
     public function loginView () 
     {
