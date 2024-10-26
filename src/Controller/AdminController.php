@@ -4,7 +4,8 @@ namespace App\Controller;
 
 use App\Manager;
 
-class AdminController extends Controller{
+class AdminController extends Controller
+{
 
     public function __construct()
     {
