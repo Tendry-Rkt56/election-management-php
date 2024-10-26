@@ -2,7 +2,8 @@
 
 namespace App\Model\Entity;
 
-class Admin extends Entity {
+class Admin extends Entity 
+{
 
 
     public function index ()
