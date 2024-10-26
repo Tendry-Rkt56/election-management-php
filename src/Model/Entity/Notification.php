@@ -2,7 +2,8 @@
 
 namespace App\Model\Entity;
 
-class Notification extends Entity {
+class Notification extends Entity 
+{
 
     public function insertNotifications ($type)
     {
