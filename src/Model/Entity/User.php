@@ -6,7 +6,8 @@ use App\Manager;
 
 use Exception;
 
-class User extends Entity{
+class User extends Entity
+{
 
     public function login ($data = []) 
     {  
